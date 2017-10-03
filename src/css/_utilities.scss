@@ -1,0 +1,12 @@
+// hide elements above 600px - layout default width
+@media (min-width: 600px){
+    .hidden-large {
+        display: none
+    }    
+}
+
+@media (max-width: 599px){
+    .hidden-small {
+        display: none
+    }    
+}

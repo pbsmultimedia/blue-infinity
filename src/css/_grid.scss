@@ -1,0 +1,42 @@
+.container {
+    //width: 600px;
+    width: 90%; // 600px with 30px of margin = 5% percent of margin on each side
+    margin: 0 auto;
+    max-width: 1366px;
+    overflow: hidden;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+.col-03, .col-04 {
+    float: left;
+}
+
+.col-03, .col-04, .col-12 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media ( max-width: 599px ){
+    .col-03, .col-04 {
+        width: 50%;
+    }
+    
+}    
+
+@media ( min-width: 600px ){
+    .col-03 {
+    width: 25%;
+    }    
+    .col-04 {
+    width: 33.33333%;
+    }
+    
+    .col-12 {
+        width: 100%;
+    }
+}

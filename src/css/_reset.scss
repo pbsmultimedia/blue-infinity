@@ -1,0 +1,34 @@
+// reset html elements used on this layout
+
+body {
+    margin: 0;
+    font-family: $font-family;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+}

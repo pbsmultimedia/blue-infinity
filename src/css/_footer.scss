@@ -1,0 +1,10 @@
+.home__footer {
+    border-top: 1px solid #979797;
+    padding: 24px 0 24px; // TO-DO: convert to a variable - $vertical-rhythm
+}
+
+.home__footer-article {
+    background: #ccc;
+    padding-top: 75%; // height like 85px when body is 600px wide
+    margin-bottom: 24px;
+}

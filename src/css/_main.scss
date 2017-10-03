@@ -1,0 +1,35 @@
+.main__subtitle {
+    margin-bottom: 24px;
+    color: $dark-grey;
+}
+
+.main__article {
+    width: 100%;
+    min-height: 170px;
+    margin-bottom: 24px;
+}
+
+.main__article-link:hover .main__article-img{
+    filter: grayscale(0);
+}
+
+.main__article-img {
+    width: 100%;
+    margin-bottom: 8px;
+    background: #ccc;
+    transition: filter 1s;
+    filter: grayscale(1);
+}
+
+.main__article-intro {
+    width: 78%; // 160px is 100%, 125px is 78%
+    margin: 0 auto;
+}
+
+.main__article-intro-text {
+    color: $dark-grey;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 8px;
+    display: block;
+}

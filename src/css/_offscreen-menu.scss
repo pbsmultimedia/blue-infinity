@@ -1,0 +1,87 @@
+// based on: https://www.sitepoint.com/pure-css-off-screen-navigation-menu/
+
+body {
+    overflow-x: hidden;
+}
+
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+    position: absolute;
+    top: 43px;
+    right: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><style>rect{ fill: #{ $light-blue } };</style><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+    background-size: contain;
+}
+
+.offscreen-menu {
+    list-style: none;
+    background: $deep-blue;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    bottom: 0;
+    z-index: 0;
+    padding-top: 90px;
+    transition: all .5s;
+}
+
+.offscreen-menu__link {
+    border-bottom: 1px solid $light-blue;
+    padding: 5px;
+    color: $light-blue;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    &:hover {
+        background: $light-blue;
+        color: $deep-blue;
+    }    
+}    
+
+.offscreen-menu__link--border-top {
+    border-top: 1px solid $light-blue;
+}
+
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+    transition: right .5s;
+}
+
+.nav-trigger + label {
+    transform: rotate(0deg);
+    transition: all .5s;
+}
+
+.nav-trigger:checked + label {
+    transform: rotate(180deg);
+}
+
+.nav-trigger:checked ~ .site-wrap {
+    right: 200px;
+    filter: blur(5px);
+    z-index: -1;
+    transition: right .5s, filter 1s;
+}
+
+.nav-trigger:checked ~ .offscreen-menu {
+    right: 0px;
+}

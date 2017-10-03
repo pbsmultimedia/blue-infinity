@@ -1,0 +1,17 @@
+.btn{
+    background: #1184dc;
+    color: #93ccf7;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    
+    &:hover{
+        color: $light-blue;
+        background: $deep-blue;
+        transition: all 1s;
+    }
+    
+}
